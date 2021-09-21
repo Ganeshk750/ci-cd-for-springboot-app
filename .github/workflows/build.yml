@@ -108,7 +108,7 @@ jobs:
           name: artifact
           #From this path
           path: target/ci-cd-spring-boot-app.jar
-  #Deploy's job ================================================////============================
+  #Deploy's job ========================================================================
   deploy:
       #Depends on build's job
       needs: build
