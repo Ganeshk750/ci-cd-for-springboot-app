@@ -3,12 +3,11 @@ name: CI/CD Pipeine
 
 on:
    #Manually trigger workflow runs
-  workflow_dispatch:
-  #Trigger the workflow on push from the main branch
   push:
-   branches:
-     - master
-     
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
 jobs:
    #Test's job
    tests:
@@ -24,6 +23,8 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
         cache: maven
-    - name: Run Tests
+    - name: Run Tests    
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+     
+
