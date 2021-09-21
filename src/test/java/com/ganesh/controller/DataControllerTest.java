@@ -20,19 +20,19 @@ class DataControllerTest {
     DataController dataController;
 
     @Test
-    @DisplayName("Testing how healthCheck() method works")
+    @DisplayName("Testing how healthCheck() method works!")
     void healthCheck() {
         assertEquals("HEALTH CHECK OK !", dataController.healthCheck());
     }
 
     @Test
-    @DisplayName("Testing how version() method works")
+    @DisplayName("Testing how version() method works!")
     void version() {
         assertEquals( "The actual version is 1.0.0", dataController.version());
     }
 
     @Test
-    @DisplayName("Testing how nationsLenght() method works")
+    @DisplayName("Testing how nationsLenght() method works!")
     void nationsLenght() {
         Integer nationsLength = dataController.getRandomNations().size();
         assertEquals(10, nationsLength);
