@@ -12,7 +12,7 @@ jobs:
    #Test's job
    tests:
     name: Unit tests
-     #Run on Ubantu using the latest version
+     #Run on Ubuntu using the latest version
     runs-on: ubuntu-latest
     #Job's steps
     steps:
@@ -22,7 +22,8 @@ jobs:
       with:
         java-version: '11'
         distribution: 'adopt'
-        cache: maven 
+        cache: maven
+    - name: Run Tests
     - name: Build with Maven
       run: mvn -B package --file pom.xml
      
