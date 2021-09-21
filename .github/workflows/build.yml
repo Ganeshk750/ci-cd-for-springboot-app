@@ -1,0 +1,30 @@
+#WorkFlow name
+name: CI/CD Pipeine
+
+on:
+   #Manually trigger workflow runs
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+   #Test's job
+   tests:
+    name: Unit tests
+     #Run on Ubantu using the latest version
+    runs-on: ubuntu-latest
+    #Job's steps
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 11
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+        distribution: 'adopt'
+        cache: maven
+    - name: Run Tests    
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml
+     
+
