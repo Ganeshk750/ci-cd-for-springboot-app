@@ -34,7 +34,7 @@ jobs:
       #Run Tests
       - name: Run Tests
         run: mvn -B test
-  #Sonar's Job ======================================================
+  #Sonar's Job =============================================================
   sonar:
     #Depends on test's job
     needs: tests
@@ -127,7 +127,7 @@ jobs:
           with:
             aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
             aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-            aws_session_token: ${{ secrets.SESSION_TOKEN }}
+            aws_session_token: ${{ secrets.AWS_SESSION_TOKEN }}
             use_existing_version_if_available: false
             application_name: spring-boot-demo
             environment_name: Springbootdemo-env
