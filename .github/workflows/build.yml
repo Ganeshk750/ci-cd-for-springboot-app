@@ -129,8 +129,8 @@ jobs:
             aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
             aws_session_token: ${{ secrets.AWS_SESSION_TOKEN }}
             use_existing_version_if_available: false
-            application_name: spring-boot-demo
-            environment_name: Springbootdemo-env
+            application_name: test-spring-boot-deploy
+            environment_name: Testspringbootdeploy-env
             version_label: ${{github.SHA}}
             region: us-east-1
             deployment_package: ci-cd-spring-boot-app.jar
